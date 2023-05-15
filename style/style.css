@@ -197,7 +197,7 @@ main{
   font-size: 96px;
   line-height: 72px;
   color: #fff;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .main-baner-blaack-content-logo-desc{
   font-family: 'Open Sans Condensed';
@@ -1782,8 +1782,20 @@ html{
     justify-content: space-between;
     display: flex;
   }
+   #slider-range{
+    display: none;
+  }
 }
 @media (max-width: 960px) {
+  .slider-btn{
+    width: 10%;
+  }
+  .swiper-slide{
+    max-width: 100% !important;
+  }
+  .swiper-slide-active{
+    transform: scale(1) !important;
+  }
   .berger-link{
     font-weight: 300;
     font-size: 40px;
@@ -2027,28 +2039,28 @@ html{
   .svg-item-3{
     position: absolute;
     right: -11.4%;
-    top: 62.7%;
+    top: 62.3%;
     width: 67.309%;
     height: 10.472%;
   }
   .svg-item-2{
     position: absolute;
     right: -11.4%;
-    top: 71.034%;
+    top: 70.734%;
     width: 66.072%;
     height: 9.252%;
   }
   .svg-item-1{
     position: absolute;
     right: -11.4%;
-    top: 79.561%;
+    top: 79.061%;
     width: 66.021%;
     height: 7.981%;
   }
   .svg-item-0{
     position: absolute;
     right: -11%;
-    top: 87%;
+    top: 86.3%;
     width: 62.4%;
     height: 8.971%;
   }
@@ -2084,6 +2096,12 @@ html{
   }
 }
 @media (max-width: 640px) {
+  .contact-sogl {
+    font-size: 16px;
+  }
+  .contact-sogl > span {
+    text-align: left;
+  }
   .title-blok{
     font-size: 16px;
   }
@@ -2091,7 +2109,7 @@ html{
     font-weight: 300;
     font-size: 24px;
     line-height: 27px;
-    margin-bottom:25px;
+    margin-bottom:35px;
   }
   .list-call{
     width: 60px;

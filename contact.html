@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./jquery/jquery-ui.min.css">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <div class="conteiner">
+      <div id="header" class="header-inner">
+        <div class='leng'></div>
+        <a href="./index.html" class="header-link">ГЛАВНАЯ</a>
+        <a href="./invest.html" class="header-link">ИНВЕСТИЦИИ</a>
+        <a href="./komp.html" class="header-link">КОМПЛЕКС</a>
+        <a class="logo-link" href="./index.html">
+          <img class="logo-img-big" src="./images/LOGO.svg" alt="">
+          <img class="logo-img-smal" src="./images/Group (2).svg" alt="">
+        </a>
+        <a href="./apart.html" class="header-link">АПАРТАМЕНТЫ</a>
+        <a href="./lock.html" class="header-link">ЛОКАЦИЯ</a>
+        <a href="./contact.html" class="header-link header-link-active">КОНТАКТЫ</a>
+        <img onclick="openCloused()" src="./images/Vector (31).svg" alt="">
+      </div>
+      <div id="header-menu" class="header-menu">
+        <div class="header-menu-left">
+          <div class="berger-mail">info@aliviahotel.com</div>
+          <div class="berger-mail">+382 54 545 415</div>
+          <div class="berger-soc">
+            <img src="./images/Vector (28).svg" alt="">
+            <img src="./images/Vector (29).svg" alt="">
+            <img src="./images/Vector (30).svg" alt="">
+          </div>
+        </div>
+        <div class="header-menu-right">
+          <a href="./index.html" class="berger-link">ГЛАВНАЯ</a>
+          <a href="./invest.html" class="berger-link">ИНВЕСТИЦИИ</a>
+          <a href="./komp.html" class="berger-link">КОМПЛЕКС</a>
+          <a href="./apart.html" class="berger-link">АПАРТАМЕНТЫ</a>
+          <a href="./lock.html" class="berger-link">ЛОКАЦИЯ</a>
+          <a href="./contact.html" class="berger-link berger-link-active">КОНТАКТЫ</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      const openCloused = () => {
+        let bat = document.getElementById('header-menu')
+        if (bat.classList.contains('header-menu-activ')) {
+          bat.classList.remove('header-menu-activ') 
+        } else {
+          bat.className =  bat.className + ' header-menu-activ'
+        }
+      }
+    </script>
+    </header>
+
+  <script src="./js/script.js"></script>
+
+  <main>
+    <div class="conteiner conteiner-contact">
+      <div class="contact-info">
+        <h1 class="contacti-h1 contacti-h12">СВЯЖИТЕСЬ С НАМИ</h1>
+        <h2 class="h2-contact">info@aliviahotel.com</h2>
+        <h2 class="h2-contact">+382 54 545 415</h2>
+        <div class="contact-soc">
+          <img src="./images/Vector (28).svg" alt="">
+          <img src="./images/Vector (29).svg" alt="">
+          <img src="./images/Vector (30).svg" alt="">
+        </div>
+      </div>
+      <div class="form-block">
+        <h1 class="contacti-h1">Оставить заявку</h1>
+        <h3>Оставьте контакты в форме обратной<br/>связи и мы вам перезвоним.</h3>
+        <div class="pading-contact"></div>
+        <div class="inputs-contact">
+          <div class="inputs-contact-title">Имя</div>
+          <input placeholder="Введите ваше имя" type="text" class="inputs-contact-input">
+        </div>
+        <div class="inputs-contact">
+          <div class="inputs-contact-title">E-mail</div>
+          <div class="input-neob">Необязательно</div>
+          <input placeholder="Введите e-mail адрес" type="text" class="inputs-contact-input">
+        </div>
+        <div class="inputs-contact">
+          <div class="inputs-contact-title">Телефон</div>
+          <input placeholder="Введите номер телефона" type="text" class="inputs-contact-input">
+        </div>
+        <div class="contact-sogl">
+          <input class="contact-sogl-chek" type="checkbox" name="" id="">
+          <span>Даю <a href="">согласие</a> на обработку персональных данных</span>
+        </div>
+        <div class="btn-contact">ПОДТВЕРДИТЬ</div>
+      </div>
+      <img class="img img-contact" src="./images/image 25.jpg" alt="">
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="conteiner">
+      <div class="footer-inner">
+        <img class="footer-logo" src="./images/Logo (1).svg"/>
+        <div class="footer-links">
+          <a href="./index.html" class="footer-link">ГЛАВНАЯ</a>
+          <a href="./invest.html" class="footer-link">ИНВЕСТИЦИИ</a>
+          <a href="./komp.html" class="footer-link">КОМПЛЕКС</a>
+          <a href="./apart.html" class="footer-link">АПАРТАМЕНТЫ</a>
+          <a href="./lock.html" class="footer-link">ЛОКАЦИЯ</a>
+          <a href="./contact.html" class="footer-link">КОНТАКТЫ</a>
+        </div>
+        <div class="footer-contact">
+          <div class="footer-contact-item">
+            <img class="footer-contact-item-img" src="./images/Vector (8).svg" alt="">
+            <div class="footer-contact-item-title">+382 54 545 415</div>
+          </div>
+          <div class="footer-contact-item">
+            <img class="footer-contact-item-img" src="./images/Vector (9).svg" alt="">
+            <div class="footer-contact-item-title">info@aliviahotel.com</div>
+          </div>
+          <div class="footer-contact-item">
+            <img class="footer-contact-item-img" src="./images/Vector (10).svg" alt="">
+            <div class="footer-contact-item-title">adress 23 city country </div>
+          </div>
+        </div>
+        <div class="footer-contact-rigts">© ALIVIA All rights reserved</div>
+      </div>
+    </div>
+  </footer>
+  <div class="follow-cursor">
+    <div class="follow-cursor-title">Номер апартаментов: S050</div>
+    <div class="follow-cursor-desc">Площадь 100м2</div>
+    <div class="follow-cursor-state">Свободен</div>
+  </div>
+  <div id="lang" class="lang">
+    <span>Ru</span>
+    <img src="./images/Vector.svg" alt="">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+  <script>SmoothScroll({animationTime: 800, stepSize: 75, accelerationDelta: 30, accelerationMax: 2, keyboardSupport: true, arrowScroll: 50, pulseAlgorithm: true, pulseScale: 4, pulseNormalize: 1, touchpadSupport   : true,})</script>
+</body>
+</html>

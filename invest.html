@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./jquery/jquery-ui.min.css">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <div class="conteiner">
+      <div id="header" class="header-inner">
+        <div class='leng'></div>
+        <a href="./index.html" class="header-link">ГЛАВНАЯ</a>
+        <a href="./invest.html" class="header-link header-link-active">ИНВЕСТИЦИИ</a>
+        <a href="./komp.html" class="header-link">КОМПЛЕКС</a>
+        <a class="logo-link" href="./index.html">
+          <img class="logo-img-big" src="./images/LOGO.svg" alt="">
+          <img class="logo-img-smal" src="./images/Group (2).svg" alt="">
+        </a>
+        <a href="./apart.html" class="header-link">АПАРТАМЕНТЫ</a>
+        <a href="./lock.html" class="header-link">ЛОКАЦИЯ</a>
+        <a href="./contact.html" class="header-link">КОНТАКТЫ</a>
+        <img onclick="openCloused()" src="./images/Vector (31).svg" alt="">
+      </div>
+      <div id="header-menu" class="header-menu">
+        <div class="header-menu-left">
+          <div class="berger-mail">info@aliviahotel.com</div>
+          <div class="berger-mail">+382 54 545 415</div>
+          <div class="berger-soc">
+            <img src="./images/Vector (28).svg" alt="">
+            <img src="./images/Vector (29).svg" alt="">
+            <img src="./images/Vector (30).svg" alt="">
+          </div>
+        </div>
+        <div class="header-menu-right">
+          <a href="./index.html" class="berger-link">ГЛАВНАЯ</a>
+          <a href="./invest.html" class="berger-link berger-link-active">ИНВЕСТИЦИИ</a>
+          <a href="./komp.html" class="berger-link">КОМПЛЕКС</a>
+          <a href="./apart.html" class="berger-link">АПАРТАМЕНТЫ</a>
+          <a href="./lock.html" class="berger-link">ЛОКАЦИЯ</a>
+          <a href="./contact.html" class="berger-link">КОНТАКТЫ</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      const openCloused = () => {
+        console.log(1)
+        let bat = document.getElementById('header-menu')
+        if (bat.classList.contains('header-menu-activ')) {
+          bat.classList.remove('header-menu-activ') 
+        } else {
+          bat.className =  bat.className + ' header-menu-activ'
+        }
+      }
+    </script>
+  </header>
+
+  <div id="popUp-panel-beadroom" class="popUp-panel-beadroom">
+    <div class="popUp-panel-beadroom-content">
+      <div class="popUp-panel-beadroom-content-left">
+         <div class="popUp-panel-beadroom-content-left-desc">Апартамент №701</div>
+         <div class="popUp-panel-beadroom-content-left-title">Двухэтажный Пентхаус, 290 м²</div>
+         <div class="popUp-panel-beadroom-content-left-info">
+          <div class="popUp-panel-beadroom-content-left-level">7-8 этаж</div>
+          <div class="popUp-panel-beadroom-content-left-state">Свободен</div>
+         </div>
+         <a href="./contact.html" class="button-y button pop-up-button">
+          <span>ЗАБРОНИРОВАТЬ</span>
+          <img class="button-arrow-y" src="./images/Line 2.svg" alt="">
+         </a>
+         <button class="window-vue">
+          <span>Вид из окна</span>
+          <img src="./images/Vector (37).svg" alt="">
+         </button>
+      </div>
+      <div class="popUp-panel-beadroom-content-right">
+        <div class="popUp-panel-level-gor">
+          <span>Горы</span>
+          <img src="./images/Vector (32).svg" alt="">
+        </div>
+        <div class="popUp-panel-beadroom-content-right-img-block">
+          <img src="./images/Group 22.jpg" alt="" class="img">
+        </div>
+        <div class="popUp-panel-beadroom-content-right-btns">
+          <div class="popUp-panel-beadroom-content-right-btn">1</div>
+          <div class="popUp-panel-beadroom-content-right-btn popUp-panel-beadroom-content-right-btn-active">2</div>
+        </div>
+        <div class="popUp-panel-level-wave">
+          <span>Адриатическое море</span>
+          <img src="./images/Vector (33).svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div onclick="clouseBeadroom()" class="clouse-level">
+      <img src="./images/Arrow 2 (1).svg" alt="">
+      <span> К апартаментам</span>
+    </div>
+    <img onclick="clousedToBaner()" class="popUp-panel-baner-cloused" src="./images/Vector (36).svg" alt=""> 
+  </div>
+
+  <div id="popUp-panel-level" class="popUp-panel-level">
+    <div class="content-popUp-level">
+      <div class="counter-navigarte">
+        <div id="arrow-top" style="opacity: 0.4" class="arrow-top"></div>
+        <div class="counter-text"><span class="counter">8</span><span>этаж</span></div>
+        <div id="arrow-button" class="arrow-button"></div>
+      </div>
+      <div class="content-popUp-level-title">Выберите апартаменты</div>
+      <div class="popUp-panel-level-gor">
+        <span>Горы</span>
+        <img src="./images/Vector (32).svg" alt="">
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide1">
+            <img src="./images/8.png" alt="" class="img">
+            <svg class="level-8-1" width="1187" height="803" viewBox="0 0 1187 803" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M1186.5 803V0.5H473V66.5H0.5V803H1186.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-8-2" width="1175" height="806" viewBox="0 0 1175 806" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M698.5 0.5H4.5L0 805.5H1175V345.5H996.5V71.5H698.5V0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-8-3" width="1193" height="1056" viewBox="0 0 1193 1056" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M1192.5 1055.5V0.5H0V1055.5H1192.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-8-4" width="1165" height="1043" viewBox="0 0 1165 1043" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M1164.5 0H0V1043H1164.5V0Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="swiper-slide swiper-slide1">
+            <img src="./images/7.png" alt="" class="img">
+            <svg class="level-7-1" width="1264" height="1153" viewBox="0 0 1264 1153" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M1264 0V751H764.5V1153H546V976.5H0.5V262V0H1264Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>            
+            <svg class="level-7-2" width="1240" height="1153" viewBox="0 0 1240 1153" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M1062.5 0.5H0V750.5H494.5V1152.5H693V979.5H1239.5V242H1062.5V0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>   
+            <svg class="level-7-3" width="1258" height="1640" viewBox="0 0 1258 1640" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M0 748V1173V1206.5H67V1465.5H619.5V1639.5H1221V1206.5H1257.5V0.5H760.5V396.5H537V748H0Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>  
+            <svg class="level-7-4" width="1238" height="1643" viewBox="0 0 1238 1643" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M0 1175.5V0.5H489.5V398H690V746.5H1238V1204.5H1178.5V1465.5H619.5V1643H33.5V1211H0V1175.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>                
+          </div>
+          <div class="swiper-slide swiper-slide1">
+            <img src="./images/4,5,6.png" alt="" class="img">
+            <svg class="level-6-1" width="1281" height="1150" viewBox="0 0 1281 1150" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M1259.5 1149.5H544.5V972H0V260.5V0H1280.5V750H1259.5V1149.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-6-2" width="1240" height="1149" viewBox="0 0 1240 1149" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M20.5 748.5V0H1066.5V243H1239.5V977H684.5V1148.5H0V748.5H20.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-6-3" width="1284" height="1317" viewBox="0 0 1284 1317" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M544.5 352.5V201.5V0.5H1263.5V12V395H1284V1101H1279H1250V1316.5H544.5V1286.5H0V352.5H544.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-6-4" width="1250" height="1315" viewBox="0 0 1250 1315" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M9 393.5V0.5H700.5V356.5H1250V1282H697.5V1314.5H0.5V1103.5H31V1096V393.5H9Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="swiper-slide swiper-slide1">
+            <img src="./images/4,5,6.png" alt="" class="img">
+            <svg class="level-6-1" width="1281" height="1150" viewBox="0 0 1281 1150" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M1259.5 1149.5H544.5V972H0V260.5V0H1280.5V750H1259.5V1149.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-6-2" width="1240" height="1149" viewBox="0 0 1240 1149" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M20.5 748.5V0H1066.5V243H1239.5V977H684.5V1148.5H0V748.5H20.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-6-3" width="1284" height="1317" viewBox="0 0 1284 1317" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M544.5 352.5V201.5V0.5H1263.5V12V395H1284V1101H1279H1250V1316.5H544.5V1286.5H0V352.5H544.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-6-4" width="1250" height="1315" viewBox="0 0 1250 1315" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M9 393.5V0.5H700.5V356.5H1250V1282H697.5V1314.5H0.5V1103.5H31V1096V393.5H9Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="swiper-slide swiper-slide1">
+            <img src="./images/4,5,6.png" alt="" class="img">
+            <svg class="level-6-1" width="1281" height="1150" viewBox="0 0 1281 1150" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M1259.5 1149.5H544.5V972H0V260.5V0H1280.5V750H1259.5V1149.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-6-2" width="1240" height="1149" viewBox="0 0 1240 1149" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M20.5 748.5V0H1066.5V243H1239.5V977H684.5V1148.5H0V748.5H20.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-6-3" width="1284" height="1317" viewBox="0 0 1284 1317" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M544.5 352.5V201.5V0.5H1263.5V12V395H1284V1101H1279H1250V1316.5H544.5V1286.5H0V352.5H544.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-6-4" width="1250" height="1315" viewBox="0 0 1250 1315" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M9 393.5V0.5H700.5V356.5H1250V1282H697.5V1314.5H0.5V1103.5H31V1096V393.5H9Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="swiper-slide swiper-slide1">
+            <img src="./images/1,2,3.png" alt="" class="img">
+            <svg class="level-3-1" width="727" height="981" viewBox="0 0 727 981" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M727 981H0.5V0.5H727V981Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-3-2" width="596" height="978" viewBox="0 0 596 978" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M531 355.5V0.5H0.5V977.5H531V762H596V355.5H531Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-3-3" width="1240" height="978" viewBox="0 0 1240 978" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M1045.5 0H0.5V352.5H65.5V760H0.5V977.5H1240V242H1045.5V0Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-3-5" width="710" height="1310" viewBox="0 0 710 1310" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M709.5 0.5H269.5V933.5H0.5V1309.5H709.5V0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg> 
+            <svg class="level-3-4" width="821" height="1282" viewBox="0 0 821 1282" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M821 0.5H552.5V365.5H0.5V1282H549V924.5H821V0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg> 
+            <svg class="level-3-6" width="681" height="1305" viewBox="0 0 681 1305" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M0.5 1304.5V0.5H444V927.5H680.5V1304.5H0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>   
+            <svg class="level-3-7" width="799" height="1287" viewBox="0 0 799 1287" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M0.5 924.5V0H238V370H799V1287H238V924.5H0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>       
+          </div>
+          <div class="swiper-slide swiper-slide1">
+            <img src="./images/1,2,3.png" alt="" class="img">
+            <svg class="level-3-1" width="727" height="981" viewBox="0 0 727 981" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M727 981H0.5V0.5H727V981Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-3-2" width="596" height="978" viewBox="0 0 596 978" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M531 355.5V0.5H0.5V977.5H531V762H596V355.5H531Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-3-3" width="1240" height="978" viewBox="0 0 1240 978" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M1045.5 0H0.5V352.5H65.5V760H0.5V977.5H1240V242H1045.5V0Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-3-5" width="710" height="1310" viewBox="0 0 710 1310" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M709.5 0.5H269.5V933.5H0.5V1309.5H709.5V0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg> 
+            <svg class="level-3-4" width="821" height="1282" viewBox="0 0 821 1282" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M821 0.5H552.5V365.5H0.5V1282H549V924.5H821V0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg> 
+            <svg class="level-3-6" width="681" height="1305" viewBox="0 0 681 1305" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M0.5 1304.5V0.5H444V927.5H680.5V1304.5H0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>   
+            <svg class="level-3-7" width="799" height="1287" viewBox="0 0 799 1287" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M0.5 924.5V0H238V370H799V1287H238V924.5H0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg> 
+          </div>
+          <div class="swiper-slide swiper-slide1">
+            <img src="./images/1,2,3.png" alt="" class="img">
+            <svg class="level-3-1" width="727" height="981" viewBox="0 0 727 981" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M727 981H0.5V0.5H727V981Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-3-2" width="596" height="978" viewBox="0 0 596 978" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M531 355.5V0.5H0.5V977.5H531V762H596V355.5H531Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-3-3" width="1240" height="978" viewBox="0 0 1240 978" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M1045.5 0H0.5V352.5H65.5V760H0.5V977.5H1240V242H1045.5V0Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-3-5" width="710" height="1310" viewBox="0 0 710 1310" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M709.5 0.5H269.5V933.5H0.5V1309.5H709.5V0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg> 
+            <svg class="level-3-4" width="821" height="1282" viewBox="0 0 821 1282" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M821 0.5H552.5V365.5H0.5V1282H549V924.5H821V0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg> 
+            <svg class="level-3-6" width="681" height="1305" viewBox="0 0 681 1305" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M0.5 1304.5V0.5H444V927.5H680.5V1304.5H0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>   
+            <svg class="level-3-7" width="799" height="1287" viewBox="0 0 799 1287" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M0.5 924.5V0H238V370H799V1287H238V924.5H0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg> 
+          </div>
+          <div class="swiper-slide swiper-slide1">
+            <img src="./images/0.png" alt="" class="img">
+            <svg class="level-0-1" width="799" width="867" height="917" viewBox="0 0 867 917" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M867 916.5V0H0V916.5H867Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-0-2" width="560" height="926" viewBox="0 0 560 926" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M559.5 0H0V926H559.5V0Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-0-3" width="890" height="920" viewBox="0 0 890 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M717 0H0V920H889.5V233H717V0Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-0-4" width="908" height="1643" viewBox="0 0 908 1643" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M907.5 0H493H480V336H0V1642.5H784.5V1224H907.5V0Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-0-5" width="710" height="1642" viewBox="0 0 710 1642" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M0.5 1220.5V0H486V860.5H709.5V1191V1641.5H119V1220.5H0.5Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+            <svg class="level-0-6" width="740" height="1200" viewBox="0 0 740 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_button2" d="M231 1199.5L220 862H0V0.5H212.5V349H739.5V1199.5H231Z" fill="#B7893A" fill-opacity="0.3"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="popUp-panel-level-wave">
+        <span>Адриатическое море</span>
+        <img src="./images/Vector (33).svg" alt="">
+      </div>
+      <div onclick="clouseLevel()" class="clouse-level">
+        <img src="./images/Arrow 2 (1).svg" alt="">
+        <span> К этажам</span>
+      </div>
+      <img onclick="clousedToBaner()" class="popUp-panel-baner-cloused" src="./images/Vector (36).svg" alt=""> 
+      <img  class="livel-help" src="./images/Выбор этажа.svg" alt="">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      var swiper2 = new Swiper(".mySwiper", {
+        allowTouchMove: false,
+        direction: "vertical",
+        navigation: {
+          nextEl: ".arrow-button",
+          prevEl: ".arrow-top",
+        },
+      });
+      swiper2.on("slideChange afterInit init", function () {
+        let currentSlide = this.activeIndex + 1;
+        let bottom = document.getElementById('arrow-top')
+        let top = document.getElementById('arrow-button')
+        if (this.slides.length - currentSlide === 0) {
+          top.style.opacity = '0.4'
+          bottom.style.opacity = '1'
+        } else if (this.slides.length - currentSlide === 8) {
+          bottom.style.opacity = '0.4'
+          top.style.opacity = '1'
+        } else {
+          top.style.opacity = '1'
+          bottom.style.opacity = '1'
+        }
+        document.querySelector('.counter').innerHTML = this.slides.length - currentSlide
+    });
+    </script>
+  </div>
+  <div id="popUp-panel" class="popUp-panel">
+    <div class="popUp-panel-conteiner">
+      <div  class="popUp-panel-baner">
+        <img class="img" src="./images/Group 19.jpg" alt="">
+        <svg  class="svg-item-7-8 svg_button" width="595" height="227" viewBox="0 0 595 227" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path name="0" class="hover" d="M594.5 82V193L222 139L1 226.5L0 158.5L33.5 141.5L35.5 128L53.5 119.5L48 115.5L187 50L199 53L310.5 0L470 28.5V44L503 50V65L594.5 82Z" fill="#B7893A" fill-opacity="0.5"/>
+        </svg>
+        <svg class="svg-item-6 svg_button" width="651" height="151" viewBox="0 0 651 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path name="2" d="M651 52.5V103L279 57.5L0 151V105.5L279 0L651 52.5Z" fill="#B7893A" fill-opacity="0.5"/>
+        </svg>
+        <svg class="svg-item-5 svg_button" width="651" height="135" viewBox="0 0 651 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path name="3" d="M651 44.5V95.5L279 58L0.5 134.5V89.5L279 0L651 44.5Z" fill="#B7893A" fill-opacity="0.5"/>
+        </svg> 
+        <svg class="svg-item-4 svg_button" width="652" height="109" viewBox="0 0 652 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path name="4" d="M651.5 86.5L652 35.5L279 0.5L0.5 72.5V75L39.5 78V109L279 57.5L651.5 86.5Z" fill="#B7893A" fill-opacity="0.5"/>
+        </svg>  
+        <svg class="svg-item-3 svg_button" width="613" height="94" viewBox="0 0 613 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path name="5" d="M612.5 27.5V79L241.5 57.5L7.5 93.5V72.5H0.5V48.5L241.5 0.5L612.5 27.5Z" fill="#B7893A" fill-opacity="0.5"/>
+        </svg>     
+        <svg  class="svg-item-2 svg_button" width="607" height="80" viewBox="0 0 607 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path name="6" d="M606.5 19V70L234.5 57.5L0.5 79.5V32L234.5 0L301.5 3.5L494.5 13L606.5 19Z" fill="#B7893A" fill-opacity="0.5"/>
+        </svg>  
+        <svg class="svg-item-1 svg_button" width="605" height="63" viewBox="0 0 605 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path name="7" d="M605 11V62.5L398.5 59.5L232 57.5L153.5 59.5L150.5 55.5L0 52V16L232 0.5L310 2L482 7.5H493L605 11Z" fill="#B7893A" fill-opacity="0.5"/>
+        </svg>   
+        <svg  class="svg-item-0 svg_button" width="576" height="78" viewBox="0 0 576 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path name="8" d="M576 57.5V17L488 16.5L461 16L434.5 3H380V16L202 15L125 16L124.5 2L59.5 1.5L23.5 0.5V14.5L0.5 17V47C30.3101 41.8912 45.0151 43.6393 67 56.5C92.0579 58.0962 100.776 61.4101 99.5 75L230.5 77.5L576 57.5Z" fill="#B7893A" fill-opacity="0.5"/>
+        </svg> 
+        <img onclick="clousedBaner()" class="popUp-panel-baner-cloused" src="./images/Vector (25).svg" alt="">       
+        <img class="baner-help" src="./images/Выбор этажа (1).svg" alt="">
+        <img class="baner-help2" src="./images/Group 39.svg" alt="">
+      </div>
+      <div class="popUp-panel-settings">
+        <div class="popUp-panel-settings-inner">
+          <div class="popUp-panel-settings-item">
+            <div class="popUp-panel-settings-item-komn">
+              <div class="popUp-panel-settings-item-title">Комната</div>
+              <div class="popUp-panel-settings-item-chek">
+                <div onclick="editDop(this)" class="popUp-panel-settings-item-chek-btn-one">Пентхаус</div>
+                <div class="popUp-panel-settings-item-chek-btn">
+                  <div onclick="editCall(this)" class="popUp-panel-settings-item-chek-btn-two">1</div>
+                  <div onclick="editCall(this)" class="popUp-panel-settings-item-chek-btn-two">2</div>
+                  <div onclick="editCall(this)" class="popUp-panel-settings-item-chek-btn-two">3+</div>
+                </div>
+                <div onclick="editCall(this)" class="popUp-panel-settings-item-chek-btn-one">Студия</div>
+              </div>
+            </div>
+            <div class="popUp-panel-settings-item-komn">
+              <div class="popUp-panel-settings-item-title">Этаж</div>
+              <div class="popUp-panel-settings-item-chek-wrap">
+                <div onclick="editLevel(this)" class="popUp-panel-settings-item-chek-btn-two">0</div>
+                <div onclick="editLevel(this)" class="popUp-panel-settings-item-chek-btn-two">1</div>
+                <div onclick="editLevel(this)" class="popUp-panel-settings-item-chek-btn-two">2</div>
+                <div onclick="editLevel(this)" class="popUp-panel-settings-item-chek-btn-two">3</div>
+                <div onclick="editLevel(this)" class="popUp-panel-settings-item-chek-btn-two">4</div>
+                <div onclick="editLevel(this)" class="popUp-panel-settings-item-chek-btn-two">5</div>
+                <div onclick="editLevel(this)" class="popUp-panel-settings-item-chek-btn-two">6</div>
+                <div onclick="editLevel(this)" class="popUp-panel-settings-item-chek-btn-two">7-8</div>
+              </div>
+            </div>
+            <div class="popUp-panel-settings-item-komn">
+              <div class="popUp-panel-settings-item-title">Площадь, м²</div>
+              <div class="popUp-panel-settings-item-chek popUp-panel-settings-item-chek-2">
+                <div class="popUp-panel-settings-item-chek-input">
+                  <input id="popUp-input1" class="popUp-panel-settings-item-chek-input-input" type="text">
+                  <img src="./images/Line 3.svg" alt="">
+                  <input id="popUp-input2" class="popUp-panel-settings-item-chek-input-input" type="text">
+                </div>
+                <div id="slider-range"></div>
+              </div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="./jquery/jquery-ui.min.js"></script>
+            <script>
+              $( function() {
+                $( "#slider-range" ).slider({
+                  range: true,
+                  min: 20,
+                  max: 200,
+                  values: [ 20, 200 ],
+                  slide: function( event, ui ) {
+                    $( "#popUp-input1" ).val(ui.values[ 0 ]);
+                    $( "#popUp-input2" ).val(ui.values[ 1 ]);
+                  }
+                });
+                $( "#popUp-input1" ).val($( "#slider-range" ).slider( "values", 0 ));
+                $( "#popUp-input2" ).val($( "#slider-range" ).slider( "values", 1 ));
+              } );
+            </script>
+            <div class="popUp-panel-settings-item-komn">
+              <div class="popUp-panel-settings-item-title">Дополнительно</div>
+              <div onclick="editDop(this)" class="popUp-panel-settings-item-chek-btn-one">Терраса</div>
+              <div onclick="editDop(this)" class="popUp-panel-settings-item-chek-btn-one">Вид на море</div>
+              <div onclick="editDop(this)" class="popUp-panel-settings-item-chek-btn-one">Вид на горы</div>
+            </div>
+          </div>
+          <div class="popUp-panel-settings-btn">
+            <div onclick="openList()" class="popUp-panel-settings-item-chek-btn-one">Показать</div>
+          </div>
+        </div>
+      </div>
+      <div id="popUp-panel-list-table" class="popUp-panel-list">
+        <div class="popUp-panel-list-top-element-title">
+           <div class="popUp-panel-list-top-element-name list-num">№</div>
+           <div class="popUp-panel-list-top-element-name list-call">Кол-во комнат</div>
+           <div class="popUp-panel-list-top-element-name list-lev">Этаж</div>
+           <div class="popUp-panel-list-top-element-name list-s">Площадь</div>
+           <div class="popUp-panel-list-top-element-name list-state">Статус</div>
+        </div>
+        <div id="popUp-panel-list" class="popUp-panel-list-list">
+
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/import.js"></script>
+    <script src="./js/script.js"></script>
+  </div>
+
+  <main>
+    <div class="main-baner">
+      <div class="main-baner-page">
+        <video class="bner-video" autoplay loop muted>
+          <source src="./images/локация и инвестиции.mp4"/>
+        </video>
+        <div class="main-baner-page-content">
+          <div class="main-baner-page-content-info">
+            <h1>ВКЛАД В НАСТОЯЩЕЕ</h1>
+            <h2 class="h2-baner cher-invest">Сегодня Черногория - это концентрация идеальных условий для размещения своего капитала. Стремительно растущая экономика, неподдельная лояльность к бизнесу, безграничный туристический потенциал Адриатики позволяют масштабировать ваши вложения в перспективе трех лет.</h2>
+            <div onclick="openBaner()" class="button-w button">
+              <span>СМОТРЕТЬ АПАРТАМЕНТЫ</span>
+              <img class="button-arrow" src="./images/Arrow 1 (1).svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="main-adaptiv-content1"></div>
+      <div class="main-content-info margin-lock">
+        <div class="main-content-block-title">
+          <h2 data-da=".main-adaptiv-content1,960,0" class="title-blok title-no-index">НАДЕЖНЫЕ ПАРТНЕРЫ</h2>
+          <div data-da=".main-adaptiv-content1,960,1" class="main-content-invest-title-line"></div>
+          <div data-da=".main-adaptiv-content1,960,2" class="main-content-block-desc-text">
+            <h3>Апарт-отель и территория Alivia Hotel находятся под управлением профессиональной команды Casa Del Mare, чьи отели входят в десятку лучших балканских курортов по версии The Times. <br/>Круглосуточный сервис премиум-класса с полным спектром услуг пятизвездочного отеля делает его особенно привлекательным как для взыскательных инвесторов, так и для гостей, возводящих роскошь на уровень привычного комфорта.</h3>
+          </div>
+        </div>
+        <div class="main-content-block-desc-invest">
+          <div data-da=".main-adaptiv-content1,960,3" onclick="openBaner()" class="button-y button">
+            <span>СМОТРЕТЬ АПАРТАМЕНТЫ</span>
+            <img class="button-arrow-y" src="./images/Line 2.svg" alt="">
+          </div>
+          <img data-da=".main-adaptiv-content1,960,4" class="img-invest-top" src="./images/Vector (24).svg" alt="">
+        </div>
+        </div>
+      </div>
+      <div class="main-img-block">
+        <div class="main-img-block-comp-left">
+          <img class="img" src="./images/dawdawd.jpg" alt="">
+        </div>
+        <div class="main-img-block-comp-right">
+          <img class="img img-none" src="./images/three-young-attractive-trendy-people-standing-sea-drinking-while-smiling-broadly-talking-about-something-colleagues-spending-leisure-party-their-company-arranged 1.jpg" alt="">
+        </div>
+      </div>
+      <div class="main-adaptiv-content2 margin-lock"></div>
+      <div class="main-content-block-aling main-content-info main-content-block-flex maib-aling">
+        <div class="main-content-block-title">
+          <h2 data-da=".main-adaptiv-content2,960,0" class="title-blok title-no-index">ГАРАНТИРОВАННЫЙ ДОХОД</h2>
+          <div data-da=".main-adaptiv-content2,960,1"  class="main-content-invest-title-line"></div>
+          <div data-da=".main-adaptiv-content2,960,2"  class="main-content-block-desc-text">
+            <h3>Инвестиции в недвижимость обеспечат вам стабильный доход благодаря органическому росту стоимости апартаментов до 20% ежегодно и гарантированную прибыль от 5% годовых от сдачи резиденции в аренду. Для максимального финансового комфорта инвесторов разработана система поэтапной оплаты выбранной недвижимости.</h3>
+
+          </div>
+          <img src="./images/3D model2 2.jpg" alt="" class="img img-geo">
+        </div>
+        <div class="main-content-geo-desc">
+          <div data-da=".main-adaptiv-content2,960,3"  onclick="openBaner()" class="button-y button">
+            <span>ВЫБРАТЬ АПАРТАМЕНТЫ</span>
+            <img class="button-arrow-y" src="./images/Line 2.svg" alt="">
+          </div>
+          <img src="./images/yachts-city-dock-summer-time-vacation-sea-copy-space 1.jpg" alt="" class="img img-geo img-none">
+        </div>
+        </div>
+      <div class="main-adaptiv-content3"></div>
+        <div class="main-content-block-aling main-content-info main-content-block-flex maib-aling">
+          <div class="main-content-block-title">
+            <h2 data-da=".main-adaptiv-content3,960,0" class="title-blok title-no-index">ПЕРСПЕКТИВА РАЗВИТИЯ</h2>
+            <div data-da=".main-adaptiv-content3,960,1" class="main-content-invest-title-line"></div>
+            <div data-da=".main-adaptiv-content3,960,2" class="main-content-block-desc-text">
+              <h3>Вступление страны в состав Европейского союза в перспективе пяти лет обеспечит дополнительный импульс для роста стоимости черногорской недвижимости в пределах 30%.<br/>В ближайшем будущем владение частной резиденцией в Alivia апарт-отель также сможет обеспечить и европейский вид на жительство.</h3>
+            </div>
+            <img src="./images/Olives.pdf - Page 12 of 16.jpg" alt="" class="img img-geo">
+          </div>
+          <div class="main-content-geo-desc">
+            <a data-da=".main-adaptiv-content3,960,3"  href="./contact.html" class="button-y button">
+              <span>ЗАБРОНИРОВАТЬ</span>
+              <img class="button-arrow-y" src="./images/Line 2.svg" alt="">
+            </a>
+            <img src="./images/sun-loungers-with-mattresses-umbrellas-beach-villa-milocer-montenegro 1.jpg " alt="" class="img img-geo img-none">
+          </div>
+          </div>
+      </div>
+      <div class="main-contact-link">
+        <div class="main-contact-link-block">
+          <div class="main-contact-link-block-left">
+            <h1 class="contacti-h1">СВЯЖИТЕСЬ С НАМИ</h1>
+            <h3>Оставьте контакты в форме обратной<br/> связи и мы вам перезвоним.</h3>
+          </div>
+          <div class="main-contact-link-block-right">
+            <a href="./contact.html" class="button-y2 button">
+              <span>СВЯЗАТЬСЯ</span>
+              <img class="button-arrow" src="./images/Arrow 1 (2).svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="conteiner">
+      <div class="footer-inner">
+        <img class="footer-logo" src="./images/Logo (1).svg"/>
+        <div class="footer-links">
+          <a href="./index.html" class="footer-link">ГЛАВНАЯ</a>
+          <a href="./invest.html" class="footer-link">ИНВЕСТИЦИИ</a>
+          <a href="./komp.html" class="footer-link">КОМПЛЕКС</a>
+          <a href="./apart.html" class="footer-link">АПАРТАМЕНТЫ</a>
+          <a href="./lock.html" class="footer-link">ЛОКАЦИЯ</a>
+          <a href="./contact.html" class="footer-link">КОНТАКТЫ</a>
+        </div>
+        <div class="footer-contact">
+          <div class="footer-contact-item">
+            <img class="footer-contact-item-img" src="./images/Vector (8).svg" alt="">
+            <div class="footer-contact-item-title">+382 54 545 415</div>
+          </div>
+          <div class="footer-contact-item">
+            <img class="footer-contact-item-img" src="./images/Vector (9).svg" alt="">
+            <div class="footer-contact-item-title">info@aliviahotel.com</div>
+          </div>
+          <div class="footer-contact-item">
+            <img class="footer-contact-item-img" src="./images/Vector (10).svg" alt="">
+            <div class="footer-contact-item-title">adress 23 city country </div>
+          </div>
+        </div>
+        <div class="footer-contact-rigts">© ALIVIA All rights reserved</div>
+      </div>
+    </div>
+  </footer>
+  <div class="follow-cursor">
+    <div class="follow-cursor-title">Номер апартаментов: S050</div>
+    <div class="follow-cursor-desc">Площадь 100м2</div>
+    <div class="follow-cursor-state">Свободен</div>
+  </div>
+  <div id="lang" class="lang">
+    <span>Ru</span>
+    <img src="./images/Vector.svg" alt="">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+  <script>SmoothScroll({animationTime: 800, stepSize: 75, accelerationDelta: 30, accelerationMax: 2, keyboardSupport: true, arrowScroll: 50, pulseAlgorithm: true, pulseScale: 4, pulseNormalize: 1, touchpadSupport   : true,})</script>
+</body>
+</html>

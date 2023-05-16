@@ -29,6 +29,12 @@ const openList = () =>{
   table.style.display = 'block'
   list.innerHTML = ''
   let beadroomList = filterMas(mas)
+  setTimeout(() => {
+    document.getElementById('popUp-panel-list-table').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }, 200);
   beadroomList.map((item, index) => {
     list.innerHTML = list.innerHTML + `<div class="popUp-panel-list-top-element">
     <div class="popUp-panel-list-top-element-name list-num">${item.number}</div>

@@ -444,7 +444,8 @@
   </div>
 
   <main>
-    <div class="main-baner">
+    <div class="main-baner preal">
+      <img src="./images/BG LOGO.svg"  class="logo1 plogo" alt="">
       <div class="main-baner-inner">
         <div class="main-baner-blaack">
           <div class="main-baner-blaack-content">
@@ -465,7 +466,7 @@
     <div class="main-content">
       <div class="main-content-invest main-content-info">
         <div class="main-content-invest-title title-inline ">
-          <h2 class="title-blok">ИНВЕСТИЦИИ</h2>
+          <h2  class="title-blok">ИНВЕСТИЦИИ</h2>
           <div class="main-content-invest-title-line"></div>
         </div>
         <div class="main-content-invest-desc">
@@ -479,7 +480,9 @@
           <img class="button-arrow-y" src="./images/Line 2.svg" alt="">
         </a>
       </div>
-      <div class="main-img-block">
+      <div class="main-img-block preal">
+        <img src="./images/BG LOGO.svg"  class="logo2 plogo" alt="">
+        <img id="her2" src="./images/BG LOGO2.svg"  class="logo8 plogo" alt="">
         <div class="main-img-block-invest-left">
           <img class="img" src="./images/фото1.jpg" alt="">
         </div>
@@ -487,9 +490,22 @@
           <img class="img" src="./images/фото2.jpg" alt="">
         </div>
       </div>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+      <script>
+        var controller = new ScrollMagic.Controller();
+        if (window.innerWidth >= 960){
+          var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: window.innerWidth / 2, offset: window.innerHeight + window.innerHeight/3})
+								.addTo(controller)
+
+                .on("progress", function (e) {
+                  document.getElementById('her2').style.left = `-${100 - e.progress.toFixed(3) * 100}%`
+                });
+        }
+      </script>
       <div class="main-content-invest main-content-info">
         <div class="main-content-invest-title title-inline">
-          <h2 class="title-blok">КОМПЛЕКС</h2>
+          <h2 id="trigger1" class="title-blok">КОМПЛЕКС</h2>
           <div class="main-content-invest-title-line"></div>
         </div>
         <div class="main-content-invest-desc">

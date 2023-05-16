@@ -221,6 +221,7 @@ main{
   margin-left: 15px;
   color: #fff;
 }
+
 .main-content-invest-title-line{
   width: 233px;
   height: 2px;
@@ -330,6 +331,62 @@ main{
   position: relative;
   background-color: #00000088;
 }
+.preal{
+  position: relative;
+}
+.plogo{
+  position: absolute;
+  z-index: -1;
+}
+main{
+  overflow-x: hidden;
+}
+.logo1{
+  bottom: -100px;
+  left: 20%;
+  width: 249px;
+}
+.logo2{
+  top: -50px;
+  right: 1%;
+  width: 379px;
+}
+.logo3{
+  bottom: 13%;
+  right: 1%;
+  width: 90%;
+}
+.logo4{
+  bottom: 13%;
+  right: 1%;
+  width: 600px;
+}
+.logo4{
+  bottom: 23%;
+  right: 1%;
+  width: 600px;
+}
+.logo5{
+  top: -200px;
+  right: 1%;
+  width: 600px;
+}
+.logo6{
+  bottom: -200px;
+  left: 5%;
+  width: 500px;
+}
+.logo7{
+  top: -150px;
+  left: 40%;
+  width: 1000px;
+}
+.logo8{
+  width: 50%;
+  bottom: 0;
+  left: -100%;
+}
+
 .main-baner-page-content-info{
   text-align: center;
 }
@@ -1788,8 +1845,23 @@ html{
    #slider-range{
     display: none;
   }
+  .logo6{
+    bottom: -100px;
+    left: 5%;
+    width: 400px;
+  }
+  .logo4 {
+    width: 40%;
+    bottom: 35%;
+  }
+  .logo5{
+    width: 40%;
+  }
 }
 @media (max-width: 960px) {
+  .plogo{
+    display: none;
+  }
   .slider-btn{
     width: 10%;
   }

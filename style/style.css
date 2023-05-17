@@ -426,6 +426,15 @@ h1{
   display: flex;
   align-items: center;
 }
+.main-img-block-comp-left2{
+  width: calc(50% - 14px);
+}
+.main-img-block-2{
+  margin-bottom: 10px;
+}
+.main-img-block-comp-right2{
+  width: calc(50%);
+}
 .footer-link{
   font-style: normal;
   font-weight: 400;
@@ -1859,6 +1868,9 @@ html{
   }
 }
 @media (max-width: 960px) {
+  .main-adaptiv-content4{
+    margin-top: 50px;
+  }
   .plogo{
     display: none;
   }

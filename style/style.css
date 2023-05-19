@@ -488,9 +488,9 @@ h1{
   display: none; /*chrome*/
 }
 .popUp-panel-conteiner{
-  max-width: 1435px;
+  max-width: 1200px;
   margin: auto;
-  padding: 30px;
+  padding: 15px 30px;
 }
 .overflow{
   overflow: hidden;

@@ -1609,8 +1609,14 @@ html{
   .header-inner{
     justify-content: space-evenly;
   }
+  .popUp-panel-conteiner{
+    max-width: 1000px;
+  }
 }
 @media (max-width: 1280px) {
+  .popUp-panel-conteiner{
+    max-width: 1200px;
+  }
   .content-popUp-level-title{
     display: block;
     font-family: 'Open Sans Condensed';

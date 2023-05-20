@@ -1612,11 +1612,23 @@ html{
   .popUp-panel-conteiner{
     max-width: 1000px;
   }
+  .baner-help{
+    top: 140px;
+    width: 400px;
+    left: calc(50% - 400px);
+  }
+  .main-baner-page-content-info > h1{
+    font-size: 48px;
+  }
+  .h2-baner{
+    font-size: 20px;
+  }
 }
 @media (max-width: 1280px) {
   .popUp-panel-conteiner{
     max-width: 1200px;
   }
+  
   .content-popUp-level-title{
     display: block;
     font-family: 'Open Sans Condensed';
